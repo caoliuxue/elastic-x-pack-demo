@@ -45,8 +45,6 @@ public class AdspDemoRepository {
                     ).get();
             client.close();
             return response;
-        } catch (UnknownHostException e) {
-            e.printStackTrace();
         } catch (IOException e) {
             e.printStackTrace();
         }
@@ -62,8 +60,6 @@ public class AdspDemoRepository {
                     .addTransportAddress(new InetSocketTransportAddress(InetAddress.getByName("10.120.112.145"), 9300));
             GetResponse response = client.prepareGet("sample", "order", "1").get();
             return response;
-        } catch (UnknownHostException e) {
-            e.printStackTrace();
         } catch (IOException e) {
             e.printStackTrace();
         }
